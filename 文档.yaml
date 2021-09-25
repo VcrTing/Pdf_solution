@@ -1,5 +1,6 @@
 安装 git:
   yum install -y git  
+  sudo apt-get install git vim -y
 
 安装 Nginx:
   准备工作:
@@ -7,6 +8,8 @@
     yum update -y
 
   安装:
+    sudo apt-get install nginx
+
     yum install nginx -y
 
   设置自启动:
@@ -29,5 +32,7 @@
   重启:
     service nginx restart
 
+    
+
 下载项目:
-  
+  git clone https://github.com/VcrTing/Pdf_solution.git
