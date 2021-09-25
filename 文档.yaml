@@ -1,0 +1,33 @@
+安装 git:
+  yum install -y git  
+
+安装 Nginx:
+  准备工作:
+    sudo yum install epel-release -y
+    yum update -y
+
+  安装:
+    yum install nginx -y
+
+  设置自启动:
+    systemctl enable nginx.service
+
+  配置Conf:
+    cp /root/Pdf_solution/nginx.conf /etc/nginx/conf.d/project.conf
+
+    # 可能要做的:
+      # 改 invoice.conf 里面的 Server Name
+      # vim /etc/nginx/conf.d/invoice.conf
+
+  更改User为 Root:
+    yum install vim -y
+    vim /etc/nginx/nginx.conf
+
+  移除 Nginx 默认的配置:
+    删除 nginx.conf 里面默认的一个 80 端口的配置
+
+  重启:
+    service nginx restart
+
+下载项目:
+  
